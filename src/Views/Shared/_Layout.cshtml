@@ -1,99 +1,94 @@
 <!doctype html>
 <html lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>@ViewData["Title"] - CustomTagHelper</title>
-        <!-- Add to homescreen for Chrome on Android -->
-        <meta name="mobile-web-app-capable" content="yes">
-        <!-- Add to homescreen for Safari on iOS -->
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="apple-mobile-web-app-title" content="Material Design Lite">
-        <meta name="msapplication-TileColor" content="#3372DF">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-            rel="stylesheet">
-            <environment names="Development">
-            <link rel="stylesheet" href="~/lib/material-design-lite/material.css" />
-            <link rel="stylesheet" href="~/css/site.css" />
-            </environment>
-            <environment names="Staging,Production">
-            <link rel="stylesheet" href="//storage.googleapis.com/code.getmdl.io/1.0.0/material.min.css"
-                asp-fallback-href="~/lib/material-design-lite/material.min.css"
-                asp-fallback-test-class="hidden" asp-fallback-test-property="visibility" asp-fallback-test-value="hidden" />
-                <link rel="stylesheet" href="~/css/site.css" asp-file-version="true" />
-                </environment>
-                <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-            </head>
-            <body>
-                <div class="mdl-layout mdl-js-layout mdl-layout--overlay-drawer-button">
-  <header class="mdl-layout__header mdl-layout__header--waterfall">
-    <!-- Top row, always visible -->
-    <div class="mdl-layout__header-row">
-      <!-- Title -->
-      <span class="mdl-layout-title">@ViewData["Title"] - CustomTagHelper</span>
-      <div class="mdl-layout-spacer"></div>
-      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
-                  mdl-textfield--floating-label mdl-textfield--align-right">
-        <label class="mdl-button mdl-js-button mdl-button--icon"
-               for="waterfall-exp">
-          <i class="material-icons">search</i>
-        </label>
-        <div class="mdl-textfield__expandable-holder">
-          <input class="mdl-textfield__input" type="text" name="sample"
-                 id="waterfall-exp" />
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>@ViewData["Title"] - CustomTagHelper</title>
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+  <meta name="msapplication-TileColor" content="#3372DF">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <environment names="Development">
+    <link rel="stylesheet" href="~/lib/material-design-lite/material.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+  </environment>
+  <environment names="Staging,Production">
+    <link rel="stylesheet" href="//storage.googleapis.com/code.getmdl.io/1.0.0/material.min.css" asp-fallback-href="~/lib/material-design-lite/material.min.css" asp-fallback-test-class="hidden" asp-fallback-test-property="visibility" asp-fallback-test-value="hidden"
+    />
+    <link rel="stylesheet" href="~/css/site.css" asp-file-version="true" />
+  </environment>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+  <div class="mdl-layout mdl-js-layout mdl-layout--overlay-drawer-button">
+    <header class="mdl-layout__header mdl-layout__header--waterfall">
+      <!-- Top row, always visible -->
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">@ViewData["Title"] - CustomTagHelper</span>
+        <div class="mdl-layout-spacer"></div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                                mdl-textfield--floating-label mdl-textfield--align-right">
+          <label class="mdl-button mdl-js-button mdl-button--icon" for="waterfall-exp">
+            <i class="material-icons">search</i>
+          </label>
+          <div class="mdl-textfield__expandable-holder">
+            <input class="mdl-textfield__input" type="text" name="sample" id="waterfall-exp" />
+          </div>
         </div>
       </div>
-    </div>
-    <!-- Bottom row, not visible on scroll -->
-    <div class="mdl-layout__header-row">
-      <div class="mdl-layout-spacer"></div>
-      <!-- Navigation -->
-      <nav class="waterfall-demo-header-nav mdl-navigation">
+      <!-- Bottom row, not visible on scroll -->
+      <div class="mdl-layout__header-row">
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation -->
+        <nav class="waterfall-demo-header-nav mdl-navigation">
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+        </nav>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">@ViewData["Title"] - CustomTagHelper</span>
+      <nav class="mdl-navigation">
         <a class="mdl-navigation__link" href="">Link</a>
         <a class="mdl-navigation__link" href="">Link</a>
         <a class="mdl-navigation__link" href="">Link</a>
         <a class="mdl-navigation__link" href="">Link</a>
       </nav>
     </div>
-  </header>
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">@ViewData["Title"] - CustomTagHelper</span>
-    <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-    </nav>
+    <main class="mdl-layout__content">
+      @RenderBody()
+    </main>
+    <footer class="mdl-mini-footer">
+      <div class="mdl-mini-footer--left-section">
+        <div class="mdl-logo">@ViewData["Title"] - CustomTagHelper</div>
+        <ul class="mdl-mini-footer--link-list">
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Privacy & Terms</a></li>
+        </ul>
+      </div>
+    </footer>
   </div>
-  <main class="mdl-layout__content">
-    @RenderBody()
-  </main>
-  <footer class="mdl-mini-footer">
-  <div class="mdl-mini-footer--left-section">
-    <div class="mdl-logo">@ViewData["Title"] - CustomTagHelper</div>
-    <ul class="mdl-mini-footer--link-list">
-      <li><a href="#">Help</a></li>
-      <li><a href="#">Privacy & Terms</a></li>
-    </ul>
-  </div>
-</footer>
-  </div>
+  <environment names="Development">
+    <script src="~/lib/material-design-lite/material.js"></script>
+  </environment>
+  <environment names="Staging,Production">
+    <script src="//storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js" asp-fallback-src="~/lib/material-design-lite/material.min.js" asp-fallback-test="window.componentHandler">
+    </script>
+    <script src="~/js/site.js" asp-file-version="true"></script>
+  </environment>
+  @RenderSection("scripts", required: false)
+</body>
 
-
-                <environment names="Development">
-                <script src="~/lib/material-design-lite/material.js"></script>
-                </environment>
-                <environment names="Staging,Production">
-                <script src="//storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"
-                                                                                                asp-fallback-src="~/lib/material-design-lite/material.min.js"
-                                                                                                asp-fallback-test="window.componentHandler">
-                </script>
-                <script src="~/js/site.js" asp-file-version="true"></script>
-                </environment>
-                @RenderSection("scripts", required: false)
-            </body>
-        </html>
+</html>
