@@ -1,34 +1,21 @@
-body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+html, body {
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+.waterfall-demo-header-nav .mdl-navigation__link:last-of-type {
+    padding-right: 0;
 }
 
-/* Set widths on the form inputs since otherwise they're 100% wide */
-input,
-select,
-textarea {
-    max-width: 280px;
+.demo-content {
+    border-radius: 2px;
+    padding: 80px 56px;
+    margin-bottom: 80px
 }
 
-/* Carousel */
-.carousel-caption {
-    z-index: 10 !important;
-}
-
-    .carousel-caption p {
-        font-size: 20px;
-        line-height: 1.4;
-    }
-
-@media (min-width: 768px) {
-    .carousel-caption {
-        z-index: 10 !important;
-    }
+.mdl-navigation__link.is-active.is-active::before,
+.mdl-navigation__link.is-active.is-active::after {
+	background-color: #FFF;
+  	height: 4px;
 }
