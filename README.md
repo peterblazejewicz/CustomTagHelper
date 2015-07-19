@@ -1,5 +1,6 @@
-# CustomTagHelper
-An ASP5 MVC6 custom tag helper sample project using Material Design Lite
+# CustomTagHelper [WIP]
+An ASP5 MVC6 custom tag helper sample project using Material Design Lite.
+This project is mostly `work in progress` as code is failing to correctly run at runtime (using `beta5` `dnx`).
 
 ## Description
 
