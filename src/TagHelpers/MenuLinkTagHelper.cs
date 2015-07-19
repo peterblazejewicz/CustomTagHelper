@@ -17,7 +17,7 @@ namespace CustomTagHelper.TagHelpers
 
         public MenuLinkTagHelper(IUrlHelper urlHelper)
         {
-          this.urlHelper = urlHelper;
+            this.urlHelper = urlHelper;
         }
 
         public string ActionName { get; set; }
@@ -31,8 +31,23 @@ namespace CustomTagHelper.TagHelpers
         public ViewContext ViewContext { get; set; }
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
-          StringBuilder sb = new StringBuilder();
-          string menuUrl = urlHelper.Action(ActionName, ControllerName);
+            StringBuilder sb = new StringBuilder();
+            string menuUrl = urlHelper.Action(ActionName, ControllerName);
+            output.TagName = "a";
+            output.Attributes.Add("href", $"{menuUrl}");
+            output.Content.SetContent(MenuText);
+            var routeData = ViewContext.RouteData.Values;
+            var currentController = routeData["controller"];
+            var currentAction = routeData["action"];
+            if (String.Equals(ActionName, currentAction as string, StringComparison.OrdinalIgnoreCase)
+                  && String.Equals(ControllerName, currentController as string, StringComparison.OrdinalIgnoreCase))
+            {
+                output.Attributes.Add("class", "mdl-navigation__link is-active");
+            }
+            else
+            {
+                output.Attributes.Add("class", "mdl-navigation__link");
+            }
         }
     }
 }
