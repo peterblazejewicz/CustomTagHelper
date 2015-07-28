@@ -1,0 +1,19 @@
+@using CustomTagHelper.Models
+
+@model IEnumerable<FeaturedMovie>
+
+<dl>
+    @foreach (var movie in Model)
+    {
+        <dt>(@movie.Rank) @movie.Name</dt>
+        <dd>
+            <div>
+                @movie.Description
+            </div>
+            <em>Critics say:</em>
+            <cache vary-by="@movie.Name">
+                @Component.Invoke("FeaturedMovies", movie.Name)
+            </cache>
+        </dd>
+    }
+</dl>
