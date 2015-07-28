@@ -18,8 +18,8 @@
   },
 
   "commands": {
-    "kestrel": "Microsoft.AspNet.Hosting --server Kestrel --config hosting.ini",
-    "web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --config hosting.ini"
+    "kestrel": "Microsoft.AspNet.Hosting --server Kestrel --ASPNET_ENV development --config hosting.ini",
+    "web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --ASPNET_ENV development --config hosting.ini"
   },
 
   "frameworks": {
@@ -42,7 +42,7 @@
   "scripts": {
     "prepublish": [
       "npm install",
-      "bower install", 
+      "bower install",
       "gulp clean",
       "gulp min"
     ]
