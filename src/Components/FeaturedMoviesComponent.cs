@@ -10,7 +10,7 @@ using CustomTagHelper.Models;
 
 namespace CustomTagHelper.Components
 {
-    [ViewComponent(Name = "FeaturedMovie")]
+    [ViewComponent(Name = "FeaturedMovies")]
     public class FeaturedMoviesComponent : ViewComponent
     {
         private readonly IMemoryCache _cache;
