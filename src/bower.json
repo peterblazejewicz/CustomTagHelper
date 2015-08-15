@@ -6,5 +6,22 @@
     "jquery-validation": "1.11.1",
     "jquery-validation-unobtrusive": "3.2.2",
     "material-design-lite": "~1.0.2"
+  },
+  "overrides": {
+    "material-design-lite": {
+      "main": [
+        "material{.js,.min.js,.min.js.map}",
+        "material{.css,.min.css,.min.css.map}"
+      ]
+    },
+    "jquery": {
+      "main": "dist/jquery{.js,.min.js,.min.map}"
+    },
+    "jquery-validation": {
+      "main": "jquery.validate.js"
+    },
+    "jquery-validation-unobtrusive": {
+      "main": "jquery.validate.unobtrusive{.js,.min.js}"
+    }
   }
 }
