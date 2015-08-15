@@ -20,32 +20,90 @@
             <link rel="stylesheet" href="~/css/site.min.css" asp-file-version="true" />
         </environment>
     </head>
-    <body>
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a asp-controller="Home" asp-action="Index" class="navbar-brand">CustomTagHelper</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a asp-controller="Home" asp-action="Index">Home</a></li>
-                        <li><a asp-controller="Movies" asp-action="Index">Movies</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="container body-content">
-            @RenderBody()
-            <hr />
-            <footer>
-                <p>&copy; 2015 - CustomTagHelper</p>
-            </footer>
-        </div>
+    <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+      <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
+<div class="mdl-layout--large-screen-only mdl-layout__header-row">
+</div>
+<div class="mdl-layout--large-screen-only mdl-layout__header-row">
+  <h3>@ViewData["Title"] - CustomTagHelper</h3>
+</div>
+<div class="mdl-layout--large-screen-only mdl-layout__header-row">
+</div>
+<div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
+  <a href="#overview" class="mdl-layout__tab is-active">Overview</a>
+  <a href="#features" class="mdl-layout__tab">Features</a>
+  <a href="#features" class="mdl-layout__tab">Details</a>
+  <a href="#features" class="mdl-layout__tab">Technology</a>
+  <a href="#features" class="mdl-layout__tab">FAQ</a>
+  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" id="add">
+    <i class="material-icons" role="presentation">add</i>
+    <span class="visuallyhidden">Add</span>
+  </button>
+</div>
+</header>
+<main class="mdl-layout__content">
+<div class="mdl-layout__tab-panel" id="features">
+  <section class="section--center mdl-grid mdl-grid--no-spacing">
+    <div class="mdl-cell mdl-cell--12-col">
+        @RenderBody()
+    </div>
+  </section>
+</div>
+<footer class="mdl-mega-footer">
+  <div class="mdl-mega-footer--middle-section">
+    <div class="mdl-mega-footer--drop-down-section">
+      <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
+      <h1 class="mdl-mega-footer--heading">Features</h1>
+      <ul class="mdl-mega-footer--link-list">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Partners</a></li>
+        <li><a href="#">Updates</a></li>
+      </ul>
+    </div>
+    <div class="mdl-mega-footer--drop-down-section">
+      <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
+      <h1 class="mdl-mega-footer--heading">Details</h1>
+      <ul class="mdl-mega-footer--link-list">
+        <li><a href="#">Spec</a></li>
+        <li><a href="#">Tools</a></li>
+        <li><a href="#">Resources</a></li>
+      </ul>
+    </div>
+    <div class="mdl-mega-footer--drop-down-section">
+      <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
+      <h1 class="mdl-mega-footer--heading">Technology</h1>
+      <ul class="mdl-mega-footer--link-list">
+        <li><a href="#">How it works</a></li>
+        <li><a href="#">Patterns</a></li>
+        <li><a href="#">Usage</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Contracts</a></li>
+      </ul>
+    </div>
+    <div class="mdl-mega-footer--drop-down-section">
+      <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
+      <h1 class="mdl-mega-footer--heading">FAQ</h1>
+      <ul class="mdl-mega-footer--link-list">
+        <li><a href="#">Questions</a></li>
+        <li><a href="#">Answers</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="mdl-mega-footer--bottom-section">
+    <div class="mdl-logo">
+      More Information
+    </div>
+    <ul class="mdl-mega-footer--link-list">
+      <li><a href="https://developers.google.com/web/starter-kit/">Web Starter Kit</a></li>
+      <li><a href="#">Help</a></li>
+      <li><a href="#">Privacy and Terms</a></li>
+    </ul>
+  </div>
+</footer>
+</main>
+</div>
 
         <environment names="Development">
             <script src="~/lib/jquery/dist/jquery.js"></script>
@@ -62,7 +120,6 @@
             </script>
             <script src="~/js/site.min.js" asp-file-version="true"></script>
         </environment>
-
         @RenderSection("scripts", required: false)
     </body>
 </html>
